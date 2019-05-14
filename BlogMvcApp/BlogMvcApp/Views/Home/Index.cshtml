@@ -1,0 +1,38 @@
+﻿@model  IEnumerable<BlogMvcApp.Models.BlogModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Blog Listesi</h2>
+
+<div class="row">
+    <div class="col-md-8">
+        @foreach (var item in Model)
+        {
+        <div class="blog">
+            
+            <h3 class="page-header">
+                @item.Baslik
+            </h3>
+            <p>
+                <span class="glyphicon glyphicon-time"></span>
+                @item.AddDate
+            </p>
+            <hr />
+            <img class="img-responsive" src="http://placehold.it/900x300" alt=""
+            <hr />
+            <p>
+                @item.Explanation
+            </p>
+            <button class="btn btn-primary">Daha Fazla...</button>
+           </div>
+            }
+
+
+        </div>
+    <div class="col-md-4">
+
+    </div>
+</div>
+
+
